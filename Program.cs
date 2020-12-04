@@ -10,7 +10,7 @@ namespace AdventOfCode
         static void Main(string[] args)
         {
             Console.WriteLine("Advent of Code 2020");
-            Day03.Example02();
+            Day04.Example01();
         }
     }
 }
