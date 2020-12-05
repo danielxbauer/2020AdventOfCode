@@ -2,39 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace AdventOfCode.Examples
 {
-    public static class Extension
-    {
-        public static bool ContainsAll<T>(this IEnumerable<T> list, IEnumerable<T> values)
-        {
-            foreach (var value in values)
-            {
-                if (!list.Contains(value))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        public static string WithoutPrefix(this string value, string prefix)
-            => value.EndsWith(prefix) ? value.Substring(0, value.Length - prefix.Length) : value;
-
-        public static bool Between(this string str, int min, int max)
-        {
-            return int.TryParse(str, out int result)
-                ? result >= min && result <= max
-                : false;
-        }
-
-        public static bool Matches(this string str, string regex)
-            => new Regex(regex).IsMatch(str);
-    }
-
     public static class Day04
     {
         private static Dictionary<string, string> ToPassport(string value)
