@@ -1,2 +1,2 @@
 language = "swift"
-run = "cd 'Swift/day12' && swiftc -o ./out.o main.swift ../util.swift && ./out.o"
+run = "cd 'Swift/day13' && swiftc -o ./out.o main.swift ../util.swift && ./out.o"
